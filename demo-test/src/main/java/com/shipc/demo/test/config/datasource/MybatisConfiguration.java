@@ -1,7 +1,6 @@
 package com.shipc.demo.test.config.datasource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 /**
@@ -21,7 +19,7 @@ import javax.sql.DataSource;
  * @Version 1.0
  */
 @Configuration
-@MapperScan(basePackages = {}, sqlSessionFactoryRef = "sqlSessionFactory", sqlSessionTemplateRef = "sqlSessionTemplate")
+@MapperScan(basePackages = {"com.shipc.demo.test.orm.sys.mapper"}, sqlSessionFactoryRef = "sqlSessionFactory", sqlSessionTemplateRef = "sqlSessionTemplate")
 public class MybatisConfiguration {
 
     @Autowired

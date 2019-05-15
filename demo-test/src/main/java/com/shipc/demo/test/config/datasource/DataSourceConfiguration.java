@@ -50,7 +50,7 @@ public class DataSourceConfiguration {
     }
 
     @Bean(name = "slaveDataSources")
-    private List<DataSource> slaveDataSources() {
+    public List<DataSource> slaveDataSources() {
         List<DataSource> list = new ArrayList<>();
         list.add(slaveDataSource_1());
         list.add(slaveDataSource_2());
