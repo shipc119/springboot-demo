@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shipc.demo.test.orm.sys.mapper.UserMapper">
+    <resultMap id="result" type="com.shipc.demo.test.orm.sys.domain.User">
+        <id column="UUID" property="uuid"/>
+        <result column="USER_NAME" property="userName"/>
+        <result column="PASSWORD" property="password"/>
+    </resultMap>
+
+    <sql id="table">
+        SYS_USER
+    </sql>
+
+    <sql id="columns">
+        UUID, USER_NAME, PASSWORD
+    </sql>
+
+    <insert id="add" parameterType="com.shipc.demo.test.orm.sys.domain.User" keyProperty="uuid" keyColumn="UUID" useGeneratedKeys="true">
+        INSERT INTO
+        <include refid="table"/>
+        (
+        USER_NAME, PASSWORD
+        )
+        VALUES
+        (
+        #{userName}, #{password}
+        )
+    </insert>
+
+    <select id="find" resultMap="result">
+        SELECT
+        <include refid="columns"/>
+        FROM
+        <include refid="table"/>
+    </select>
+</mapper>
