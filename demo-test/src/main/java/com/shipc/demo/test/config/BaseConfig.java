@@ -1,6 +1,7 @@
 package com.shipc.demo.test.config;
 
 import org.springframework.context.annotation.Configuration;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @ClassName BaseConfig
@@ -10,5 +11,6 @@ import org.springframework.context.annotation.Configuration;
  * @Version 1.0
  */
 @Configuration
+@EnableSwagger2
 public class BaseConfig {
 }

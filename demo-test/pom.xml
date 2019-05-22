@@ -98,14 +98,13 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-
         <!-- redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>1.4.3.RELEASE</version>
         </dependency>
-        <!--这个内嵌的redis无法指定host-->
+        <!--内嵌的redis-->
 <!--        <dependency>-->
 <!--            <groupId>com.github.kstyrc</groupId>-->
 <!--            <artifactId>embedded-redis</artifactId>-->
@@ -119,7 +118,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <!-- 测试 使用H2数据库 -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -127,6 +126,23 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- spring boot 整合swagger2: 开始 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+        <!-- spring boot 整合swagger2: 开始 -->
 
 
     </dependencies>
