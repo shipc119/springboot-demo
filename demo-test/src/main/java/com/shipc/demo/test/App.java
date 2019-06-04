@@ -5,16 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
- * @ClassName App
- * @Description
- * @Author shipc
- * @Date 2019/5/9 19:35
- * @Version 1.0
+ *
+ * @author shipc 2019/5/9 19:35
+ * @version 1.0
  */
-@ComponentScan(basePackages = {"com.shipc.demo.test"})
+@EnableCaching  // 开启缓存
 @SpringBootApplication
 public class App {
 
