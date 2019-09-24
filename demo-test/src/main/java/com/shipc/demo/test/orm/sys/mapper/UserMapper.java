@@ -15,5 +15,11 @@ public interface UserMapper {
 
     void add(User user);
 
+    int updateById(User user);
+
     List<User> find();
+
+    User getById(Long uuid);
+
+    int deleteById(Long uuid);
 }

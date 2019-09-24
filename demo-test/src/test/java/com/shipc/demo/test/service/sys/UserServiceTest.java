@@ -36,5 +36,7 @@ public class UserServiceTest extends BaseTest {
         assertEquals(1, users.size());
         assertEquals("admin", users.get(0).getUserName());
         assertEquals("admin123", users.get(0).getPassword());
+
+
     }
 }

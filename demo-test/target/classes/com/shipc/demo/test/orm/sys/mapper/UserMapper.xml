@@ -8,29 +8,53 @@
     </resultMap>
 
     <sql id="table">
-        SYS_USER
+        sys_user
     </sql>
 
     <sql id="columns">
-        UUID, USER_NAME, PASSWORD
+        uuid, user_name, password
     </sql>
 
     <insert id="add" parameterType="com.shipc.demo.test.orm.sys.domain.User" keyProperty="uuid" keyColumn="UUID" useGeneratedKeys="true">
-        INSERT INTO
+        insert into
         <include refid="table"/>
         (
-        USER_NAME, PASSWORD
+        user_name, password
         )
-        VALUES
+        values
         (
         #{userName}, #{password}
         )
     </insert>
 
-    <select id="find" resultMap="result">
-        SELECT
+    <update id="updateById" parameterType="com.shipc.demo.test.orm.sys.domain.User">
+        update
+        <include refid="table"/>
+        <set>
+            user_name=#{userName},
+            password=#{password}
+        </set>
+        where uuid=#{uuid}
+    </update>
+
+    <select id="getById" resultMap="result">
+        select
         <include refid="columns"/>
-        FROM
+        from
+        <include refid="table"/>
+        where uuid=#{uuid}
+    </select>
+
+    <delete id="deleteById">
+        delete from
+        <include refid="table"/>
+        where uuid=#{uuid}
+    </delete>
+
+    <select id="find" resultMap="result">
+        select
+        <include refid="columns"/>
+        from
         <include refid="table"/>
     </select>
 </mapper>

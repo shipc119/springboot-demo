@@ -17,4 +17,10 @@ public class UserFactory {
         user.setPassword(dto.getPassword());
         return user;
     }
+
+    public static User updateBuild(UserCreateInDTO dto, User user) {
+        user.setPassword(dto.getPassword());
+        user.setUserName(dto.getUserName());
+        return user;
+    }
 }
