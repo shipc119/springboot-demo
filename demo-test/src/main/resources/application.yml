@@ -1,6 +1,8 @@
 server:
-  port: 8099
+  port: 8009
 spring:
+  profiles:
+    active: dev
   datasource:
     url: jdbc:mysql://localhost:3306/demo-test?useUnicode=true&characterEncoding=utf8
     driverClassName: com.mysql.jdbc.Driver

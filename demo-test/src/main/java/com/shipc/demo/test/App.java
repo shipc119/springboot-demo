@@ -14,7 +14,7 @@ import org.springframework.cache.annotation.EnableCaching;
  */
 @EnableCaching  // 开启缓存
 @SpringBootApplication
-public class App {
+public class App{
 
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
