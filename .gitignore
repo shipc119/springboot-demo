@@ -23,3 +23,5 @@ lib/*.jar
 hs_err_pid*
 
 .idea
+
+*/target
